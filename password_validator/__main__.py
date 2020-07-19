@@ -1,10 +1,21 @@
 import sys
+import argparse
+import os
 from .filereader import file_reader
 
 def main():
-    
-    args = sys.argv[1:]
-    weak_password = file_reader(args[0])
+
+    my_parser = argparse.ArgumentParser(prog="password_validator", description="")
+    my_parser.add_argument('Path', metavar='path', type=str, help='the path to common passwords file')
+    args = my_parser.parse_args()
+
+    path = args.Path
+
+    if not os.path.isfile(path):
+        print('The file specified does not exist')
+        sys.exit()
+
+    weak_password = file_reader(path)
 
     for line in sys.stdin:
         npass = ""
