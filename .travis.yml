@@ -4,6 +4,9 @@ jobs:
         python:
             - "3.8.4"
 
+        before_script:
+            - bash install.sh
+
         # command to run tests
         script:
-            - python -m unittest test__main__
+            - python -m unittest password_validator/test__main__.py

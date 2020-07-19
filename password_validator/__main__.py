@@ -1,7 +1,7 @@
 import sys
 import argparse
 import os
-from .filereader import file_reader
+from password_validator.filereader import file_reader
 
 def main():
 
