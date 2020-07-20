@@ -39,8 +39,20 @@ bash install.sh
 # Usage
 
 ```bash
-cat <input text file> | password_validator <common password text file>
+cat <path to input text file> | password_validator <path to common password text file>
 ```
 
 #  Result 
 
+```bash
+$ cat test_file/input_passwords.txt | password_validator test_file/weak_password_list.txt
+mom -> Error: Too Short
+password1 -> Error: Too common
+Bj**rk****oacute* -> Error: Invalid Charaters
+pipi -> Error: Too Short
+**** -> Error: Invalid Charaters
+```
+
+## Author
+
+Managed by [Aditya Munot](https://github.com/AdityaMunot)
