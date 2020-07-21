@@ -29,17 +29,44 @@ OS - Linux
 
 Software - Python 3.6+
 
-# Installation
+# Installation - Production
 
 ```bash
-git clone https://github.com/AdityaMunot/password_validator.git
-bash install.sh
+$ git clone https://github.com/AdityaMunot/password_validator.git
+$ bash install.sh
+```
+
+# Installation - Development
+
+```bash
+$ git clone https://github.com/AdityaMunot/password_validator.git
+```
+
+For use in Development:
+
+* Open install.sh
+
+* comment and uncomment the following way.
+
+* ```bash
+  # production setup #
+  # pip3 install .
+  
+  # development setup #
+  pip3 install -e .
+  ```
+  
+
+This will reduce the hassle of keep installing the cli tool.
+
+```bash
+$ bash install.sh
 ```
 
 # Usage
 
 ```bash
-cat <path to input text file> | password_validator <path to common password text file>
+$ cat <path to input text file> | password_validator <path to common password text file>
 ```
 
 #  Result 
