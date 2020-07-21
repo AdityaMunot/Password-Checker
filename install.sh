@@ -1,1 +1,5 @@
-pip3 install -e .
+# production setup #
+pip3 install .
+
+# development setup #
+# pip3 install -e .
